@@ -1,4 +1,4 @@
-const input = require("./input");
+const { loadInput } = require("../utils");
 
 function part1(depths) {
   let increments = 0;
@@ -29,4 +29,6 @@ function part2(depths) {
   return increments;
 }
 
-console.log(`Part 1: ${part1(input)}\nPart 2: ${part2(input)}`);
+loadInput(__dirname).then((input) =>
+  console.log(`Part 1: ${part1(input)}\nPart 2: ${part2(input)}`)
+);
